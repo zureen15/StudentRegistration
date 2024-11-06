@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multistep Form</title>
+    <link rel="stylesheet" href="register.css" />
+    <script src="register.js" defer></script>
+
+</head>
+
+<body>
+    <form class="form-wizard">
+        <!-- .completed -->
+        <div class="completed" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+
+            <h3>Registration Successful!</h3>
+            <p>Your account has been created.</p>
+        </div>
+        <!-- /.completed -->
+
+        <h1>Student Registration</h1>
+
+        <!-- .progress-container -->
+        <div class="progress-container">
+            <div class="progress"></div>
+
+            <ol>
+                <li class="current">Personal</li>
+                <li>Account</li>
+                <li>Education</li>
+                <li>Student Interest</li>
+            </ol>
+        </div>
+        <!-- /.progress-container -->
+
+        <!-- .steps-container -->
+
+        <!-- STEP 1 FOR PERSONAL OR STUDENT INFORMATION -->
+        <div class="steps-container">
+            <div class="step">
+                <h3>Personal Information</h3>
+                <div class="row">
+                    <div class="form-control">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first-name" required />
+                    </div>
+                    <div class="form-control">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last-name" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-control">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required />
+                    </div>
+                    <div class="form-control">
+                        <label for="phone">Mobile Phone</label>
+                        <input type="tel" id="phone" name="phone" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-control">
+                        <div class="selector">
+                            <label for="nationality">Nationality</label>
+                            <select class="option" id="nationality" name="nationality" required>
+                                <option selected disabled value="">--Select your nationality--</option>
+                                <option value="malaysian">Malaysian</option>
+                                <option value="non-malaysian">Non-Malaysian</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-control">
+                        <div class="selector">
+                            <label for="non-malay">If Non-Malaysian</label>
+                            <select class="option" id="non-malay" name="non-malay" >
+                                <option selected disabled value="">--Select your country--</option>
+                                <option value="brunei">Brunei</option>
+                                <option value="china">China</option>
+                                <option value="india">India</option>
+                                <option value="indonesia">Indonesia</option>
+                                <option value="singapore">Singapore</option>
+                                <option value="spain">Spain</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 2 FOR ACCOUNT INFORMATION -->
+            <div class="step">
+                <h3>Account Information</h3>
+                <div class="row">
+                    <div class="form-control">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required />
+                    </div>
+                    <div class="form-control">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required />
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+            </div>
+
+            <!-- STEP 3 EDUCATION INFORMATION -->
+            <div class="step">
+                <h3>Education Information</h3>
+                <div class="row">
+                    <div class="form-control">
+                        <div class="selector">
+                            <label for="edu_level">Education Level</label>
+                            <select class="option" id="edu_level" name="edu_level">
+                                <option selected disabled value="">--Select your education level--</option>
+                                <option value="foundation">Foundation</option>
+                                <option value="diploma">Diploma</option>
+                                <option value="advanced_diploma">Advanced Diploma</option>
+                                <option value="degree">Degree</option>
+                                <option value="master">Master's Degree</option>
+                                <option value="PHD">Doctoral Degree</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-control">
+                        <div class="selector">
+                            <label for="university">Universities</label>
+                            <select class="option" id="university" name="university">
+                                <option selected disabled value="">--Select your university--</option>
+                                <option value="GMI">German-Malaysian Institute</option>
+                                <option value="MSU">Management and Science University</option>
+                                <option value="UM">University of Malaya</option>
+                                <option value="UPM">Universiti Putra Malaysia</option>
+                                <option value="UUM">Universiti Utara Malaysia</option>
+                                <option value="UiTM">Universiti Teknologi Mara</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-control">
+                        <div class="selector">
+                            <label for="course">Course</label>
+                            <select class="option" id="course" name="course">
+                                <option selected disabled value="">--Select your course--</option>
+                                <option value="business">Business</option>
+                                <option value="IT">Information Technology</option>
+                                <option value="engineer">Engineer</option>
+                                <option value="eduction">Education</option>
+                                <option value="computer_science">Computer Science</option>
+                                <option value="mechanical_engineer">Mechanical Engineering</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-control">
+                    <div class="social-media-container">
+                        <h3>Social Media Link</h3>
+                        <label for="facebook">Facebook Page</label>
+                        <input type="url" id="facebook" name="facebook" placeholder="http://www.facebook.com/yourname">
+                        <label for="instagram">Instagram Profile</label>
+                        <input type="url" id="instagram" name="instagram" placeholder="https://www.instagram.com/yourname">
+                        <label for="youtube">YouTube Channel</label>
+                        <input type="url" id="youtube" name="youtube" placeholder="http://www.youtube.com/user/yourname">
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h3>Student Interest</h3>
+                <div class="form-control">
+                    <label for="bio">Interest</label>
+                    <textarea id="bio" name="bio" rows="4" required></textarea>
+                </div>
+            </div>
+        </div>
+        <!-- /.steps-container -->
+
+        <!-- .controls -->
+        <div class="controls">
+            <button type="button" class="prev-btn">Prev</button>
+            <button type="button" class="next-btn">Next</button>
+            <button type="submit" class="submit-btn">Submit</button>
+        </div>
+        <!-- /.controls -->
+    </form>
+</body>
+
+</html>
